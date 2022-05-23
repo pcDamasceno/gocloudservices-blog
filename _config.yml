@@ -106,7 +106,7 @@ plugins:
 
 # Publication settings
 baseurl: "/gocloudservices-blog" # the subpath of your site, e.g. /blog
-url: "https://gocloudservices.co" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 author: Apehex
 copyright:
   holder: Untitled
