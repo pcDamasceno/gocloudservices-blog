@@ -105,8 +105,8 @@ plugins:
   - jekyll-redirect-from
 
 # Publication settings
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://127.0.0.1:4000" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/gocloudservices-blog" # the subpath of your site, e.g. /blog
+url: "https://gocloudservices.co" # the base hostname & protocol for your site, e.g. http://example.com
 author: Apehex
 copyright:
   holder: Untitled
