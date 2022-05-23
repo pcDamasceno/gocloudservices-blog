@@ -1,20 +1,43 @@
+---
+---
+{%- assign lang = page.lang | default: layout.lang | default: site.lang | default: 'en' -%}
+{%- assign menu = site.data.menus[page.menu][lang] -%}
+{%- assign title = page.title | default: layout.title | default: site.title -%}
+{%- assign description = page.description | default: layout.description | default: site.description -%}
+{%- assign stylesheets = page.stylesheets | default: layout.stylesheets | default: site.stylesheets -%}
+{%- assign scripts = page.scripts | default: layout.scripts | default: site.scripts -%}
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<!--
+    Consulting template by APEHEX
+    https://github.com/apehex/jekyll-theme-consulting
+    Free for personal and commercial use under the CCA 4.0 license
+-->
+<html lang="{{ lang }}">
 
-  {%- include head.html -%}
+{% include head.html title=title description=description stylesheets=stylesheets %}
 
-  <body>
+<body>
 
-    {%- include header.html -%}
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
 
-    {%- include footer.html -%}
+                {{ content }}
 
-  </body>
+            </div>
+        </div>
+
+        {% include sidebar.html menu=menu %}
+
+    </div>
+
+    {% include footer.html %}
+
+    {% include scripts.html scripts=scripts %}
+
+</body>
 
 </html>

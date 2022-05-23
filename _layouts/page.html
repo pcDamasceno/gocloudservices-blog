@@ -1,14 +1,8 @@
 ---
 layout: default
 ---
-<article class="post">
+{%- assign header = page.header | default: layout.header | default: site.header -%}
+{%- assign background = page.background | default: layout.background | default: site.background -%}
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
-
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-</article>
+{% include front.html header=header background=background %}
+{{ content }}
